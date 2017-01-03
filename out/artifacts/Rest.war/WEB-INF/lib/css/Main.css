@@ -1,0 +1,2168 @@
+ 
+
+A { 
+  color: black; 
+}
+
+A:hover {
+  color: #1370ab;
+}
+
+body, th, td, button, input, select, textarea {
+  font: 12px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+
+html {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  cursor: default;
+  _overflow-y: auto; /* prevent older IE from always showing the vertical scrollbar space */
+}
+
+button {
+  padding: 0 .5em 0 .5em;
+  _padding: 1 .7em 0 .7em;
+  _width: 1px;  /*fix for IE*/
+  _overflow: visible;  /*fix for IE*/
+  font: 12px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+
+fieldset {
+  cursor: default;
+}
+
+td, input, select, textarea {
+  font: 12px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+
+input[type=text]:focus, textarea:focus {
+  background-color: #FFFEbf;
+}
+
+.MainBody {
+  background: #A8A199 url(../images/background.jpg) top left repeat-x;
+  padding: 0 0 0 0;
+}
+
+.MainBody2 {
+  background: #A8A199 url(../images/background_2.jpg) top left repeat-x;
+  padding: 0 0 0 0;
+}
+
+.OverallContentCell {
+  padding: 0 12px 0 12px;
+}
+
+h2, .h2 {
+    color: black;
+    padding-bottom: 4px;
+    white-space: nowrap;
+    font: bold 18px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+
+h4, .h4 {
+    color: SteelBlue;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    font: bold 14px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.InfoImage {
+  width: 12px;
+  height: 12px;
+  vertical-align: -1px;
+  border: none;
+}
+
+.InfoLink {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*################################### Main Layout ###################################*/
+
+.Header {
+  width: 100%;
+}
+
+.OuterBorder { /* outer white border */
+}
+
+.InnerBackground { /* inner dark green background */
+}
+
+.Toolbar { /* top app button container */
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5px;
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 2px;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.Toolbar .ToolbarText {
+  color: black;
+  text-decoration: none;
+}
+
+.Toolbar .LastLogin {
+  font-size: 11px;
+}
+
+.MainUnderbar { /* breadcrumb and current user under the menu tabs */
+  width: 100%;
+  cursor: default;
+}
+
+.MainUnderbar .Breadcrumb {
+  font:bold 12px Arial;
+  width: 100%;
+  padding: 1 0 1 10;
+  text-align: left;
+  color: black;
+}
+
+.MainUnderbar .Breadcrumb a {
+  color: black; 
+  text-decoration: none;
+}
+
+.MainUnderbar .Breadcrumb a:hover {
+  color: #0079C2;
+  text-decoration: underline;
+}
+
+.MainUnderbar .Breadcrumb button {
+  font: 11px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.MainActionButtons { /* table for main page action buttons (top and bottom) */
+  font-size: 13px;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+}
+
+.MainCentralTable { /* gray inner container */
+  vertical-align: top;
+  background-color: white;
+}
+
+.NestedCentralTable {
+  background-color: #fff;
+}
+
+.MainContent {
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  vertical-align: top;
+  padding: 7 10 0 10;
+  background-color: white;
+}
+
+.MainStandalone {
+  width: 100%;
+  height: 100%;
+  background: #D9E4F3 url(../images/bg-body.gif) top left repeat-x;
+}
+
+.ProgressBar {
+  font: bold 10px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  text-align: center;
+  cursor: default;
+}
+
+img .statusBar {
+  background: white url(../images/percentImage_back.png) top left no-repeat;
+  padding: 0;
+  margin: 5px 0 0 0;
+  background-position: 1px 0;
+}
+
+/*################################### Main Title Bar ###################################*/
+
+.MainTitle {
+  width:100%;
+  height: 23px;
+  cursor: default;
+  text-align: left;
+  border-bottom: 1px solid #5C712D;
+}
+
+.MainTitle .Left {
+  background: #918D7B url(../images/titlebar-left.png) top no-repeat;  /*#918D7B, #A4A08B*/
+  width: 6px;
+}
+
+.MainTitle .Middle {
+  background: #AFC875 url(../images/titlebar-middle.png) top repeat-x;
+  padding: 2px 2px 3px 10px;
+  font: bold 18px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.MainTitle .Right {
+  background: #918D7B url(../images/titlebar-right.png) top no-repeat;
+  width: 6px;
+}
+
+.MainTitle .AutoRefresh {
+  background: #AFC875 url(../images/titlebar-middle.png) top repeat-x;
+  font: 11px Arial, sans-serif;
+  color: white;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 2px 2px 3px 10px;
+}
+
+/*################################### Main Menu ###################################*/
+
+.MainMenu {
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+}
+
+.MainMenu td.MenuCell {
+  vertical-align: top;
+  width: 95px;
+}
+
+.MainMenu .Tab {
+  white-space: nowrap;
+  color: black;
+}
+
+.MainMenu .Tab .TabMiddle {
+  width: 100%;
+  text-align: center;
+  background: #B8CAE0 url(../images/tabs/main/unsel-middle.gif) top repeat-x;
+  border: none;
+  padding: 3px 5px 3px 5px;
+  color: white;
+  font: bold 12px Arial, Helvetica, sans-serif
+}
+
+.MainMenu .Tab .TabLeft {
+  background: url(../images/tabs/main/unsel-left.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 1px;
+}
+
+.MainMenu .Tab .TabRight {
+  background: url(../images/tabs/main/unsel-right.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 1px;
+}
+
+.MainMenu .DisabledTab {
+    white-space: nowrap;
+}
+
+.MainMenu .DisabledTab .TabMiddle {
+    width: 100%;
+    text-align: center;
+    background: #0b5794;
+    border: 2px solid #3982b5;
+    padding: 3px 5px 3px 5px;
+    color: gray;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+
+.MainMenu .DisabledTab .TabLeft {
+    background: #0b5794;
+    vertical-align: top;
+    padding: 0px;
+    width: 1px;
+}
+
+.MainMenu .DisabledTab .TabRight {
+    background: #0b5794;
+    vertical-align: top;
+    padding: 0px;
+    width: 1px;
+}
+
+.MainMenu .SelTab {
+  white-space: nowrap;
+}
+
+.MainMenu .SelTab .TabMiddle {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  background: #9AC7F6 url(../images/tabs/main/sel-middle.gif) top repeat-x;
+  border-top: 1px solid #5C8CCE;
+  border-bottom: 1px solid #3464A0;
+  padding: 3px 5px 3px 5px;
+  color: white;
+  font: bold 17px Arial, Helvetica, sans-serif;
+}
+
+.MainMenu .SelTab .TabLeft {
+  background: #3464A0 url(../images/tabs/main/sel-left.gif) bottom no-repeat;
+  vertical-align: top;
+  padding: 0;
+  width: 1px;
+}
+
+.MainMenu .SelTab .TabRight {
+  background: #5C8CCE url(../images/tabs/main/sel-right.gif) bottom no-repeat;
+  vertical-align: top;
+  padding: 0;
+  width: 1px;
+}
+
+.MainMenu .HoverTab {
+  color: white;
+  white-space: nowrap;
+}
+
+.MainMenu .HoverTab .TabMiddle {
+  width: 100%;
+  text-align: center;
+  background: #C2CFDF url(../images/tabs/main/hover-middle.gif) top repeat-x;
+  padding: 3px 5px 3px 5px;
+  color: white;
+  font: bold 12px Arial, Helvetica, sans-serif;
+}
+
+.MainMenu .HoverTab .TabLeft {
+  background: url(../images/tabs/main/hover-left.gif) no-repeat;
+  vertical-align: top;
+  padding: 0;
+  width: 1px;
+}
+
+.MainMenu .HoverTab .TabRight {
+  background: url(../images/tabs/main/hover-right.gif) no-repeat;
+  vertical-align: top;
+  padding: 0;
+  width: 1px;
+}
+
+.MainMenu .LoadingTab {
+  color: white;
+  white-space: nowrap;
+}
+
+.MainMenu .LoadingTab .TabMiddle {
+  width: 100%;
+  text-align: center;
+  background: #A9C0D7 url(../images/tabs/main/loading-middle.gif) top repeat-x;
+  padding: 3px 5px 3px 5px;
+  color: white;
+  font: bold 12px Arial, Helvetica, sans-serif
+}
+
+.MainMenu .TabMiddle .Arrow {
+  display: none;
+}
+
+.MainMenu .LoadingTab .TabLeft {
+  background: url(../images/tabs/main/loading-left.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 1px;
+}
+
+.MainMenu .LoadingTab .TabRight {
+  background: url(../images/tabs/main/loading-right.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 1px;
+}
+
+.MainMenu .Right {
+  background: transparent url(../images/tabs/main/unsel-middle.gif) top repeat-x;
+  filter: "Alpha(opacity=50)";
+  opacity: 0.5;
+  text-align: right;
+}
+
+.MainMenu .Left {
+  background: transparent url(../images/tabs/main/unsel-middle.gif) top repeat-x;
+  filter: "Alpha(opacity=50)";
+  opacity: 0.5;
+  width: 5px;
+}
+
+/*################################### Drop-down Menu ###################################*/
+
+.DropMenuParent {
+  position: relative;
+  z-index: 150;
+}
+
+.DropMenu {
+  display: none;
+  text-align: left;
+  position: absolute;
+  top: 24px;
+  _top: 24px;  /*for IE*/
+  left: -1;
+  min-width: 110px;
+  overflow: visible;
+  white-space: nowrap;
+  z-index: 150;
+  /* round corners for shadow */
+  -moz-border-radius-bottomleft: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  /* drop shadow */
+  -moz-box-shadow: 3px 3px 5px #aaa;
+  -webkit-box-shadow: 3px 3px 5px #aaa;
+  box-shadow: 3px 3px 5px #aaa;
+  /* border */
+  border-top: 1px solid #000;
+  border-left: 1px solid #BFE6F8;
+  border-right: 1px solid #BFE6F8;
+  border-bottom: 1px solid #BFE6F8;
+  _border-left: 1px solid #999;  /*for IE*/
+  _border-right: 1px solid #999;  /*for IE*/
+  _border-bottom: 1px solid #999;  /*for IE*/
+}
+
+.DropMenu .SelTab {
+  color: #FFDF33;
+}
+
+.DropMenu .Last {
+  /* round corners for shadow */
+  -moz-border-radius-bottomleft: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.DropMenu .Special {
+  background-color:	rgba(65, 117, 145, 0.93);
+  _background-color: rgb(75, 127, 155);
+}
+
+.DropMenu div a {
+  _width: 100%;
+  display: block;
+  text-align: left;
+  vertical-align: middle;
+  padding: 4px 20px 4px 10px;
+  font-size: 12px;
+  overflow: visible;
+  text-decoration: none;
+  color: white;
+  /* background */
+  background-color:	rgba(15, 52, 95, 0.90);
+  _background-color: rgb(31, 77, 128);
+  /* border */
+  border-left: 1px solid #33639f;
+  border-right: 1px solid #33639f;
+  border-bottom: 1px solid #33639f;
+}
+
+.DropMenu div a:hover {
+  _width: 100%;
+  display: block;
+  text-align: left;
+  vertical-align: middle;
+  padding: 4px 20px 4px 10px;
+  font-size: 12px;
+  overflow: visible;
+  text-decoration: none;
+  color: #FFDF33;
+  /* background */
+  background: black;
+  /* border */
+  border-left: 1px solid #33639f;
+  border-right: 1px solid #33639f;
+  border-bottom: 1px solid #33639f;
+}
+
+/*################################### Top Menu ###################################*/
+
+.TopMenu {
+  font-size: 13px;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+}
+.TopMenu .Tab {
+  white-space: nowrap;
+  cursor: pointer;
+  border-bottom: 1px solid #6CABE3;
+}
+.TopMenu .Tab .TabMiddle {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #aaaaaa;
+  background: #cccccc url(../images/tabs/unsel-middle.gif) top repeat-x;
+  padding: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font: bold 11px Arial, Helvetica, sans-serif;
+}
+.TopMenu .Tab .TabLeft {
+  background: url(../images/tabs/unsel-left.gif) top right no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+  padding-left: 1px;
+}
+.TopMenu .Tab .TabRight {
+  background: url(../images/tabs/unsel-right.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+  padding-right: 1px;
+}
+
+.TopMenu .SelTab {
+  color: white;
+  white-space: nowrap;
+  cursor: pointer;
+  border-bottom: 1px solid #6CABE3;
+}
+
+.TopMenu .SelTab .TabMiddle {
+  width: 100%;
+  text-align: center;
+  background: #f0f0f0 url(../images/tabs/top/sel-middle.gif) top repeat-x;
+  padding: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font: bold 11px Arial, Helvetica, sans-serif;
+}
+
+.TopMenu .SelTab .TabLeft {
+  background: url(../images/tabs/top/sel-left.gif) top right no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 7px;
+  padding-left: 2px;
+}
+
+.TopMenu .SelTab .TabRight {
+  background: url(../images/tabs/top/sel-right.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 7px;
+  padding-right: 2px;
+}
+
+.TopMenu .HoverTab {
+  white-space: nowrap;
+  cursor: pointer;
+  border-bottom: 1px solid #5BA0DF;
+}
+
+.TopMenu .HoverTab .TabMiddle {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #4da2e4;
+  background: #aed4ef url(../images/tabs/hover-middle.gif) top repeat-x;
+  padding: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font: bold 11px Arial, Helvetica, sans-serif;
+}
+
+.TopMenu .HoverTab .TabLeft {
+  background: url(../images/tabs/hover-left.gif) top right no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+  padding-left: 1px;
+}
+
+.TopMenu .HoverTab .TabRight {
+  background: url(../images/tabs/hover-right.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+  padding-right: 1px;
+}
+
+.TopMenu .LoadingTab {
+  white-space: nowrap;
+  cursor: pointer;
+  border-bottom: 1px solid #6CABE3;
+}
+
+.TopMenu .LoadingTab .TabMiddle {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #95B1CB;
+  background: #aed4ef url(../images/tabs/hover-middle.gif) top repeat-x;
+  padding: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-top: 1px dashed green;
+  font: bold 11px Arial, Helvetica, sans-serif;
+}
+
+.TopMenu .LoadingTab .TabLeft {
+  background: url(../images/tabs/hover-left.gif) top right no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+  padding-left: 1px;
+}
+
+.TopMenu .LoadingTab .TabRight {
+  background: url(../images/tabs/hover-right.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+  padding-right: 1px;
+}
+
+.TopMenu .Right {
+  /*width: 100%;*/
+  border-bottom: 1px solid #6CABE3;
+}
+.TopMenu .Left {
+  width: 1px;
+  border-bottom: 1px solid #6CABE3;
+}
+
+/*################################### Dialog Menu ###################################*/
+
+.DialogMenu {
+  color: black;
+  font-size: 13px;
+  text-align: center;
+}
+
+.DialogMenu .Tab {
+  cursor: pointer;
+}
+
+.DialogMenu .Tab .TabMiddle {
+  text-align: center;
+  border-top: 1px solid #aaaaaa;
+  background: #cccccc url(../images/tabs/unsel-middle.gif) top repeat-x;
+  padding: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font: bold 11px Arial, Helvetica, sans-serif;
+}
+
+.DialogMenu .Tab .TabLeft {
+  background: url(../images/tabs/unsel-left.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+}
+
+.DialogMenu .Tab .TabRight {
+  background: url(../images/tabs/unsel-right.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+  padding-right: 2px;
+}
+
+.DialogMenu .DisabledTab {
+    cursor: default;
+}
+
+.DialogMenu .DisabledTab .TabMiddle {
+    text-align: center;
+    border-top: 1px solid #aaaaaa;
+    background: #cccccc url(../images/tabs/unsel-middle.gif) top repeat-x;
+    padding: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font: bold 11px Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+.DialogMenu .DisabledTab .TabLeft {
+    background: url(../images/tabs/unsel-left.gif) no-repeat;
+    vertical-align: top;
+    padding: 0px;
+    width: 5px;
+}
+
+.DialogMenu .DisabledTab .TabRight {
+    background: url(../images/tabs/unsel-right.gif) no-repeat;
+    vertical-align: top;
+    padding: 0px;
+    width: 5px;
+    padding-right: 2px;
+}
+
+.DialogMenu .SelTab {
+  color: white;
+}
+
+.DialogMenu .SelTab .TabMiddle {
+  text-align: center;
+  background: #f0f0f0 url(../images/tabs/top/sel-middle.gif) top repeat-x;
+  padding: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font: bold 11px Arial, Helvetica, sans-serif;
+}
+
+.DialogMenu .SelTab .TabLeft {
+  background: url(../images/tabs/top/sel-left.gif) top right no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 7px;
+  padding-left: 2px;
+}
+
+.DialogMenu .SelTab .TabRight {
+  background: url(../images/tabs/top/sel-right.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 7px;
+  padding-right: 2px;
+}
+
+.DialogMenu .SelTab .Blue,
+.DialogMenu .SelTab .Brown {
+  color: white;
+}
+
+.DialogMenu .HoverTab {
+  cursor: pointer;
+}
+
+.DialogMenu .HoverTab .TabMiddle {
+  text-align: center;
+  border-top: 1px solid #4da2e4;
+  background: #aed4ef url(../images/tabs/hover-middle.gif) top repeat-x;
+  padding: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font: bold 11px Arial, Helvetica, sans-serif;
+}
+
+.DialogMenu .HoverTab .TabLeft {
+  background: url(../images/tabs/hover-left.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+}
+
+.DialogMenu .HoverTab .TabRight {
+  background: url(../images/tabs/hover-right.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+  padding-right: 2px;
+}
+
+.DialogMenu .LoadingTab {
+  cursor: pointer;
+}
+
+.DialogMenu .LoadingTab .TabMiddle {
+  text-align: center;
+  border-top: 1px dashed green;
+  background: #aed4ef url(../images/tabs/hover-middle.gif) top repeat-x;
+  padding: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font: bold 11px Arial, Helvetica, sans-serif;
+}
+
+.DialogMenu .LoadingTab .TabLeft {
+  background: url(../images/tabs/hover-left.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+}
+
+.DialogMenu .LoadingTab .TabRight {
+  background: url(../images/tabs/hover-right.gif) no-repeat;
+  vertical-align: top;
+  padding: 0px;
+  width: 5px;
+  padding-right: 2px;
+}
+
+.DialogMenu .Left {
+  width: 1px;
+}
+
+/*################################### Dialog ###################################*/
+
+.Dialog {
+  height: 100%;
+  width: 100%;
+  background-color: #ECE9DF;
+}
+
+.Dialog_inline {
+  background-color: white;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.DialogFrame_inline {
+  background-color: white;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 1px 1px 10px #555;
+  -webkit-box-shadow: 1px 1px 10px #555;
+  box-shadow: 1px 1px 10px #555;
+  /*_border-right: 3px inset #999;*/
+  /*_border-bottom: 3px inset #999;*/
+  /*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#999999')";*/ /*IE 8*/
+  /*filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#999999');*/ /*IE 5-7*/
+}
+
+.Dialog_dropdown {
+  background-color: white;
+  /* round borders */
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.DialogFrame_dropdown {
+  background-color: white;
+  /* round borders */
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  /* drop shadow */
+  -moz-box-shadow: 3px 3px 4px #aaa;
+  -webkit-box-shadow: 3px 3px 4px #aaa;
+  box-shadow: 3px 3px 4px #aaa;
+  _border-right: 3px inset #999;
+  _border-bottom: 3px inset #999;
+}
+
+.Dialog .Title {
+  font-size: 13px;
+  height: 22px;
+  text-align: left;
+  vertical-align: middle;
+  background: #B0D6F7 url(../images/dialog-header.gif) top repeat-x;
+  border-bottom: 1px solid #95B7EE;
+  padding: 2 2 2 3;
+}
+
+.Dialog .Title_inline {
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.Dialog .Title .Text {
+  font: 12px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  width: 100%;
+  padding: 3px;
+}
+
+.Dialog .Title img {
+  vertical-align: middle;
+}
+
+.Dialog .Header {
+  font-size: 13px;
+  height: 20px;
+  text-align: left;
+  vertical-align: middle;
+  background: none;
+}
+.Dialog .Footer {
+  height: 37px;
+  width: 100%;
+  text-align: right;
+  white-space:nowrap;
+}
+
+.DialogFooter {
+  height: 37px;
+  width: 100%;
+  text-align: right;
+  white-space:nowrap;
+}
+
+.DialogLeft {
+  width: 5px;
+}
+
+.DialogRight {
+  width: 5px;
+}
+
+.Dialog .ContentArea {
+  border: 1px solid #999;
+  background-color: white;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.Dialog .ContentArea_inline {
+  border: none;
+}
+
+.DialogContent {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  vertical-align: top;
+  padding: 7px;
+  background-color: white;
+}
+
+.Dialog_inline_resize {
+  border: 2px solid #555;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/*################################ Page Divider ################################*/
+
+.MainDivider { /* horizontal dividing line for content */
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  cursor: default;
+  border-bottom: 1px solid #bedafb;
+}
+
+.MainDivider_Table { /* horizontal dividing line for table content */
+  width: 100%;
+  margin-top: 10px;
+  cursor: default;
+}
+
+.MainDivider_Review { /* horizontal dividing line for reviews content */
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 0;
+  cursor: default;
+  border-bottom: 1px solid #bedafb;
+}
+
+.MainDividerText {
+  font: 12px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.MainDividerLeft {
+  width: 1px;
+  padding-left: 10px;
+}
+
+.MainDividerRight {
+}
+
+/*################################ Form/Content ################################*/
+
+.AttrName { /* attribute display name */
+  font: bold 11px Arial, Helvetica, sans-serif;
+  color: #447EAE;
+  width: 120px;
+  cursor: default;
+  text-align: right;
+  vertical-align: top;
+  padding-bottom: 3px;
+  padding-top: 4px;
+  padding-right: 10px;
+  border-bottom: 1px solid #ECECEC;
+}
+
+.AttrName_Even {
+  color: #4A4A56;
+}
+
+.AttrName_Odd {
+  color: #447EAE;
+}
+
+.AttrValue { /* attribute display value */
+  text-align: left;
+  vertical-align: middle;
+  font-size: 12px;
+  padding-bottom:3px;
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-right: 10px;
+  border-bottom: 1px solid #ECECEC;
+}
+
+.GenericInputName {
+  text-align: right;
+  font-size: 11px;
+}
+
+.InputSelectableField {
+  vertical-align: top;
+  width: 24px;
+}
+
+.InputName { /* editable input field Name cell */
+  color: black;
+  font-size: 11px;
+  width: 120px;
+  cursor: default;
+  text-align: right;
+  vertical-align: top;
+  padding-top: 4px;
+}
+
+.InputNameText { /* Just the text styles of class InputName */
+  color: #3c719b;
+  font-size: 11px;
+  cursor: default;
+}
+
+.InputSpace { /* Style for space between InputName and InputValue cells */
+  width:10px;
+}
+
+.InputValue { /* editable input field Value cell */
+  text-align: left;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+.InputValueFld { /* editable input component */
+  vertical-align: middle;
+  font: 12px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.InputError {
+  text-align: left;
+  vertical-align: top;
+  color: red;
+  font-size: 12px;
+}
+
+.Text {
+  font-size: 12px;
+}
+
+.TextBold {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.Legend {
+  font-size: 12px;
+  color: SteelBlue;
+  cursor: default;
+}
+
+.VersionHeader {
+  font-size: 12px;
+  text-align: center;
+  padding:4px 4px 12px 4px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 12px;
+}
+
+.ConditionSpec {
+  color: #b50000;
+}
+
+.NotificationElt {
+  color: #b50000;
+}
+
+.ReviewText {
+  font-size: 12px;
+  color: SteelBlue;
+}
+
+.PromptText {
+  font-size: 12px;
+  color: SteelBlue;
+}
+
+.StatusBox {
+  border: 1px solid #999;
+  background-color: #f1f1f1;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.styled-text-control {
+  padding: 3px 4px 3px 4px;
+  *padding: 2px;  /* IE7 hack */
+  *height: 20px;  /* IE7 hack */
+  background-color: rgba(173, 240, 255, 0.13);
+  background-image: none;
+  border: 1px solid #aaa;
+  *border: 1px solid #7B9EBD;  /* IE7 hack */
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .125);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.styled-text-control:focus {
+  border-color: #66afe9;
+  background-color: #FFFEbf;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.styled-text-control:hover {
+  border-color: #66afe9;
+}
+
+.styled-text-control[disabled] {
+  background-color: #eee;
+}
+
+textarea.styled-text-control {
+  height: auto;
+  overflow: auto;
+}
+
+fieldset {
+  padding: .35em .625em .75em;
+  margin: 0 2px;
+  border-radius: 6px;
+}
+
+/*################################### Report Cell ####################################*/
+
+.ReportTitle {
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  background: #e2edf6 url(../images/report-titlebar.gif) top repeat-x;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.ReportBody {
+  background: white;
+  font-size: 11px;
+}
+
+/*################################### Wait Message ###################################*/
+
+.WaitMsgTable {
+  text-align: center;
+  border: 3px ridge white;
+  background-color: white;
+}
+
+.WaitMsgTitle {
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  padding: 2px;
+  background: #bac3d8 url(../images/dialog-header.gif) center no-repeat;
+}
+
+/*################################ Home Page Section #################################*/
+
+.SectionTitle {
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  background: #6294C3 url(../images/portlet-header.gif) bottom repeat-x;  
+  color:white;
+}
+
+.SectionHeader {
+  text-align: center;
+  vertical-align: top;
+  padding-top: 2px;
+  background: #DBECFB; 
+  border-bottom: 1px solid #BBDBF4;
+}
+
+.SectionFooter {
+  text-align: center;
+  vertical-align: bottom;
+  padding-bottom: 2px;
+  background: #DBECFB; 
+  border-top: 1px solid #BBDBF4;  
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.SectionLink {
+  text-decoration: none;
+}
+.SectionLink:hover {
+  text-decoration: underline;
+}
+
+/*################################### Misc ###################################*/
+
+.Note {
+  color: gray;
+  text-align: left;
+  vertical-align: top;
+  font-size: 12px;
+  padding-bottom:7px;
+}
+
+.NoteText {
+  color: gray;
+  font-size: 12px;
+}
+
+.DialogTitleNote {
+  color: #666;
+  font-size: 12px;
+}
+
+.LongDescriptionText {
+  font-size: 12px;
+  background: #fefee1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.Instructions {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 12px;
+}
+
+.menu {
+  position: absolute;
+  top: 21px; /*height of sliding doors button*/
+  background-color: #eef;
+  border: 0;
+  z-index: 100;
+  font: 12px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.menu td {
+  font: 12px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  vertical-align: top;
+  white-space: nowrap;
+  padding: 6px;
+}
+
+#undo {
+  position: absolute;
+  top: 21px; /*height of sliding doors button*/
+  width: 300px;
+  background-color: #efe;
+  border: solid 1px black;
+  padding: 6px;
+  font: 12px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+
+/*############################### Colors ####################################*/
+
+.Brown {
+  color: brown;
+}
+.Blue {
+  color: blue;
+}
+
+/*######################### Statistics Table ################################*/
+
+table.Statistics {
+  border-collapse: collapse;
+}
+
+table.Statistics th {
+  font: bold 11px Arial, Helvetica, sans-serif;
+  color: white;
+  background: #777 url(../images/table/tbl-header.gif) top repeat-x;
+  padding: 3px;
+  border: 1px solid #aaa;
+  border-top: 1px solid #ccc;
+  margin: 0;
+  text-align: right;
+  width: 10ex;
+}
+
+table.Statistics td {
+  font: 12px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  padding: 3px;
+  border: 1px solid #eeeeee;
+  margin: 0;
+  text-align: right;
+}
+
+table.Statistics td.Negative {
+  color: darkred;
+}
+
+table.Statistics td.Positive {
+  color: darkgreen;
+}
+
+table.Statistics td.Category {
+  width: 250px;
+  text-align: left;
+}
+
+table.Statistics tr.Hover {
+  background-color: #E6F5FD;  
+}
+
+/*######################### Role Quality ####################################*/
+
+div.RoleQuality {
+  float: right;
+  text-align: center;
+  border: 1px solid #ccc;
+  background: #eee;
+  padding: 10px;
+  margin-right: 100px;
+}
+
+div.RoleQuality div.Title {
+  font: 13px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #1370ab;
+}
+
+div.RoleQuality div.Value {
+  font: 32px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+
+div.EntitlementHistory {
+  position: relative;
+}
+
+div.EntitlementHistoryTip {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: -30ex;
+  width: 60ex;
+  background: lightgreen;
+  border: 1px solid gray;
+  z-index: 1;
+  padding: 2px;
+}
+
+div.EntitlementHistory:hover div.EntitlementHistoryTip {
+  display: block;
+}
+
+div.EntitlementWarning {
+  position: relative;
+}
+
+div.EntitlementWarningTip {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: -30ex;
+  width: 60ex;
+  background: lightyellow;
+  border: 1px solid gray;
+  z-index: 1;
+  padding: 2px;
+}
+
+div.EntitlementWarning:hover div.EntitlementWarningTip {
+  display: block;
+}
+
+ul#accessRequestActions {
+  margin-top: .5em;
+}
+
+ul#accessRequestActions li {
+  list-style-type: none;
+  margin-bottom: .5em;
+}
+
+/*################################### Buttons ###################################*/
+
+
+.ImgButton {
+  vertical-align: middle;
+  margin: 1px;
+}
+
+/*################################### Color Buttons ###################################*/
+
+span.ColorButton_default,
+span.ColorButton_green,
+span.ColorButton_red,
+span.ColorButton_orange,
+span.ColorButton_yellow {
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+span.ColorButton_default span.Left,
+span.ColorButton_green span.Left,
+span.ColorButton_red span.Left,
+span.ColorButton_orange span.Left,
+span.ColorButton_yellow span.Left {
+  background: url('../images/buttons/color-left-default.gif') no-repeat top left;
+  font: 11px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+  padding: 0 4px 0 6px;
+  height: 18px;
+  line-height: 17px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+span.ColorButton_default span.Right,
+span.ColorButton_green span.Right,
+span.ColorButton_red span.Right,
+span.ColorButton_orange span.Right,
+span.ColorButton_yellow span.Right {
+  background: url('../images/buttons/color-right-default.gif') no-repeat top right;
+  font: 11px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+  height: 18px;
+  width: 3px;
+  display: inline-block;
+}
+
+span.ColorButton_green span.Left {
+  background: url('../images/buttons/color-left-green.gif') no-repeat top left;
+}
+span.ColorButton_green span.Right {
+  background: url('../images/buttons/color-right-green.gif') no-repeat top right;
+}
+
+span.ColorButton_red span.Left {
+  background: url('../images/buttons/color-left-red.gif') no-repeat top left;
+}
+span.ColorButton_red span.Right {
+  background: url('../images/buttons/color-right-red.gif') no-repeat top right;
+}
+
+span.ColorButton_orange span.Left {
+  background: url('../images/buttons/color-left-orange.gif') no-repeat top left;
+}
+span.ColorButton_orange span.Right {
+  background: url('../images/buttons/color-right-orange.gif') no-repeat top right;
+}
+
+span.ColorButton_yellow span.Left {
+  background: url('../images/buttons/color-left-yellow.gif') no-repeat top left;
+}
+span.ColorButton_yellow span.Right {
+  background: url('../images/buttons/color-right-yellow.gif') no-repeat top right;
+}
+
+span.ColorButton_disabled {
+  cursor: default;
+  opacity: 0.5;
+  filter: Alpha(opacity=50);
+  zoom: 1;
+}
+
+/*################################### Color Indicators ###################################*/
+
+.ColorIndicator_green,
+.ColorIndicator_red,
+.ColorIndicator_orange,
+.ColorIndicator_yellow {
+  font: 11px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  padding: 2 10 2 10;
+}
+
+.ColorIndicator_green {
+  background-color: #96e26e;
+}
+
+.ColorIndicator_red {
+  background-color: #fd8888;
+}
+
+.ColorIndicator_yellow {
+  background-color: #fced85;
+}
+
+.ColorIndicator_orange {
+  background-color: #ffb94e;
+}
+
+/*################################### Drop Menu Button ###################################*/
+
+.DropDownButton {
+  position: absolute;
+  top: 21px;
+  _top: 22px;
+  left: 1;
+  z-index: 100;
+  display: none;
+  border: 1px outset #888;
+  border-top: 1px solid #888;
+  border-left: 1px solid #888;
+  background-color: #F3F3F3; 
+  white-space: nowrap;
+  text-align: left;
+  padding: 4px;
+  /* round borders */
+  -moz-border-radius-bottomleft: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  /* drop shadow */
+  -moz-box-shadow: 3px 3px 4px #aaa;
+  -webkit-box-shadow: 3px 3px 4px #aaa;
+  box-shadow: 3px 3px 4px #aaa;
+  _border-right: 3px inset #999;
+  _border-bottom: 3px inset #999;
+  /*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";*/ /*IE 8*/
+  /*filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999');*/ /*IE 5-7*/
+    overflow-y: auto;
+}
+
+.DropDownMenu {
+  padding: 0;
+  padding-right: 20px; /*this is to ensure content does not get cut off by vertical scroll bar */
+}
+
+.DropDownMenu a {
+  text-decoration: none;
+}
+
+.DropDownMenu a:hover {
+  text-decoration: underline;
+}
+
+/*################################### Roles ###################################*/
+
+.ReassignBox {
+  position: absolute;
+  top: -0.25in;
+  left: -0.5in;
+  display: block;
+  border: 2px outset #888;
+  border-top: 1px solid #888;
+  border-left: 1px solid #888;
+  background-color: #e0e0e0;
+  white-space: nowrap;
+  text-align: left;
+  padding: 4px;
+  z-index: 1;
+}
+
+.DelegateBox {
+  position: absolute;
+  top: -0.5in;
+  left: -1.0in;
+  display: block;
+  border: 2px outset #888;
+  border-top: 1px solid #888;
+  border-left: 1px solid #888;
+  background-color: #e0e0e0;
+  white-space: nowrap;
+  text-align: left;
+  padding: 4px;
+  z-index: 1;
+}
+
+.RoleInfoTitle {
+  padding: 2px;
+  background-color: #dfd;
+  font-weight: bold;
+}
+
+.RoleInfoArea {
+  padding: 4px;
+  max-width: 800px;
+}
+
+.AppDeclarationDetail {
+  padding: 4px 4px 4px 3%;
+  background-color: #D9E4F3;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  height: 1.5in;
+}
+
+.RoundedBox {
+  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 0px;
+  border: 1px solid #648FC3;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#initializationError {
+  border: 10px solid darkred;
+  padding: 20px;
+}
+
+/*################################### Run Task Report area ###################################*/
+
+.RunTaskLine {
+  text-indent:10px;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+.RunTaskLineItem {
+  text-indent:20px;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+/*######################### Work Item Comment ####################################*/
+
+div.WorkItemComment {
+    width: 98%;
+    text-align: left;
+    border: 1px solid #ccc;
+    background: #eee;
+    padding: 10px;
+}
+
+div.WorkItemComment div.Title {
+    font: 13px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #1370ab;
+}
+
+div.WorkItemComment div.Value {
+    font: 12px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+
+/*######################### Expand/Collapse control ####################################*/
+
+#infoAreaContent {
+  filter: "Alpha(opacity=96)";
+  opacity: 0.96;
+}
+
+.expand-collapse {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.expand-collapse-controls {
+    height: 100%;
+    width: 21px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.collapse-controls {
+    width: 100%;
+    height: 100%;
+    empty-cells: show;
+}
+
+.collapse-top-row {
+    height: 3px;
+}
+
+.collapse-top-cell {
+    background-image: url(../images/infoArea/InfoArea-expanded-top.gif);
+}
+
+.collapse-middle-cell {
+    background-image: url(../images/infoArea/InfoArea-expanded-middle.gif);
+}
+
+.collapse-bottom-cell {
+    background-image: url(../images/infoArea/InfoArea-expanded-bottom.gif);
+}
+
+.collapse-bottom-row {
+    height: 21px;
+}
+
+.expand-controls {
+    background-image: url(../images/infoArea/InfoArea-collapsed.gif);
+    height: 17px;
+    width: 22px;
+}
+
+.expand-collapse-header {
+    cursor: pointer;
+    padding-left: 5px;
+    color: steelblue;
+    font-weight: bold;
+    border-top: 1px solid transparent;  /* prevents 1px shift in FF */
+    border-bottom: 1px solid #ddd;
+}
+
+.expand-collapse-content {
+    padding: 0px;
+}
+
+.expand-collapse-body {
+    border-right: 1px solid #8db2e3;
+}
+
+.expand-collapse-body-content {
+    padding-left: 5px;
+}
+
+.expand-collapse-content-bottom-border {
+    height: 2px;
+    background-image: url(../images/infoArea/InfoArea-expanded-border.gif);
+    overflow: hidden;
+}
+
+/* EXPANDED */
+.expanded .expand-controls {
+    display: none;
+}
+
+.expanded .expand-collapse-header {
+    /* Due to a 1px difference in the size of the expand and collapse controls, we increase the padding by 1 so that the header content doesn't jump */
+    padding-left: 6px;
+}
+
+/* COLLAPSED */
+.collapsed .collapse-controls {
+    display: none;
+}
+
+.collapsed .expand-collapse-body {
+    display: none;
+}
+
+/*  Sliding Toggle Checkbox */
+
+.sliding-toggle-checkbox {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #666666;
+    height: 1.5em;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    font-style: normal;
+}
+
+.sliding-toggle-checkbox label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    height: 100%;
+}
+
+.sliding-toggle-checkbox.checked label {
+    left: 0;
+}
+
+.toggle-text {
+    display: inline-block;
+    line-height: 1.5em;
+    white-space: nowrap;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+}
+
+.toggle-text-on {
+    left: 0;
+    text-align: left;
+    padding-right: 30px;
+    padding-left: 10px;
+    background-color: #007fea;
+    color: white;
+    top: -100px;
+}
+
+.toggle-text-off {
+    right: 0;
+    text-align: right;
+    padding-left: 30px;
+    padding-right: 10px;
+    background-color: white;
+    color: #666666;
+}
+
+.checked .toggle-text-on {
+    top: 0px;
+}
+
+.checked .toggle-text-off {
+    top: -100px;
+}
+
+.sliding-toggle-checkbox input {
+    position: absolute;
+    top: -30;
+    left: -30;
+}
+
+.sliding-toggle-button {
+    font-size: 8px;
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    background-color: #cccccc;
+    width: 16px;
+    left: 0;
+    right: auto;
+    top: -1;
+    border: 1px solid #666666;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    text-align: center;
+    color: #aaaaaa;
+    cursor: pointer;
+    vertical-align: middle;
+    background-image: url(../images/buttons/sliding-toggle-button.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.checked .sliding-toggle-button {
+    left: auto;
+    right: 0;
+}
+
+.toggleHover .sliding-toggle-button {
+    background-color: #eeeeee;
+}
+
+/*######################### Custom Radio button ####################################*/
+
+.Radio {
+  color: steelblue;
+}
+
+.Radio td {
+  font: bold 12px Arial;
+  white-space: nowrap;
+  border: 1px solid #bbb;
+  border-right: none;
+  background-color: #F6F6F6;
+  padding: 2 12 2 12;
+  cursor: pointer;
+}
+
+.Radio .first {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.Radio .last {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-right: 1px solid #bbb;
+}
+
+.Radio .selected {
+  color: black;
+  border: 1px solid #666;
+  background-color: #FDE37B; 
+}
+
+.Radio .disabled {
+  color: #999;
+  border-color: #777;
+  filter: "Alpha(opacity=50)";
+  opacity: 0.5;
+  cursor: default;
+}
+
+.Radio .hover {
+  background-color: #FEF5D6;
+}
+
+/*################################### Split Color Buttons ###################################*/
+
+span.SplitColorButton_default,
+span.SplitColorButton_green,
+span.SplitColorButton_red,
+span.SplitColorButton_orange,
+span.SplitColorButton_yellow {
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+span.SplitColorButton_default span.Left,
+span.SplitColorButton_green span.Left,
+span.SplitColorButton_red span.Left,
+span.SplitColorButton_orange span.Left,
+span.SplitColorButton_yellow span.Left {
+  background: url('../images/buttons/color-left-default.gif') no-repeat top left;
+  font: 11px "Segoe UI", Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+  padding: 0 5px 0 6px;
+  height: 18px;
+  line-height: 17px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+span.SplitColorButton_default span.Right,
+span.SplitColorButton_green span.Right,
+span.SplitColorButton_red span.Right,
+span.SplitColorButton_orange span.Right,
+span.SplitColorButton_yellow span.Right {
+  background: url('../images/buttons/split-color-right-default.gif') no-repeat top right;
+  vertical-align: middle;
+  height: 18px;
+  width: 21px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+span.SplitColorButton_green span.Left {
+  background: url('../images/buttons/color-left-green.gif') no-repeat top left;
+}
+span.SplitColorButton_green span.Right {
+  background: url('../images/buttons/split-color-right-green.gif') no-repeat top right;
+}
+
+span.SplitColorButton_red span.Left {
+  background: url('../images/buttons/color-left-red.gif') no-repeat top left;
+}
+span.SplitColorButton_red span.Right {
+  background: url('../images/buttons/split-color-right-red.gif') no-repeat top right;
+}
+
+span.SplitColorButton_orange span.Left {
+    background: url('../images/buttons/color-left-orange.gif') no-repeat top left;
+}
+span.SplitColorButton_orange span.Right {
+    background: url('../images/buttons/split-color-right-orange.gif') no-repeat top right;
+}
+
+span.SplitColorButton_yellow span.Left {
+  background: url('../images/buttons/color-left-yellow.gif') no-repeat top left;
+}
+span.SplitColorButton_yellow span.Right {
+  background: url('../images/buttons/split-color-right-yellow.gif') no-repeat top right;
+}
+
+span.SplitColorButton_disabled {
+  cursor: default;
+  opacity: 0.5;
+  filter: Alpha(opacity=50);
+  zoom: 1;
+}
+
+.webServiceUsage {
+    background-color: #F8F8F8;
+}
+
+
+/*################################### Simplified Dashboards ###################################*/
+
+.dashdivider {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #C0DAFF;
+  height: 20px;
+}
+
+/*################ version 1 ################*/
+.dashbadge {
+  height: 25px;
+  width: 36px;
+  padding: 3px 3px 2px 2px;
+  position: absolute;
+  top: 5px;
+  left: 62px;
+  cursor: pointer;
+}
+.dashbadge .count {
+  height: 25px;
+  width: 36px;
+  color: white;
+  font: bold 13px Helvetica, Verdana, Tahoma;
+  text-align: center;
+  position: absolute;
+  top: 6px;
+  left: 1px;
+}
+.dashbox {
+  position: relative;
+  display: inline-block;
+  *display: inline; /* IE */
+  padding-top: 10px;
+  padding-bottom: 20px;
+  width: 320px;
+  padding-left: 30px;
+  vertical-align: top;
+}
+.dashbox A {
+  text-decoration: none;
+}
+.dashbox A:hover {
+}
+.dashbox img {
+  border: none;
+}
+.dashimage {
+  vertical-align: top
+}
+.dashtext {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 7px;
+  vertical-align: top;
+  text-decoration: underline;
+}
+.dashdesc {
+  display: block;
+  font-size: 13px;
+  padding: 4 0 0 15;
+  color: gray;
+}
+
+/*################ version 2 ################*/
+.dashbadge2 {
+  height: 25px;
+  width: 36px;
+  padding: 3px 3px 2px 2px;
+  position: absolute;
+  top: 5px;
+  left: 32px;
+  cursor: pointer;
+}
+.dashbadge2 .count {
+  height: 25px;
+  width: 36px;
+  color: white;
+  font: bold 13px Helvetica, Verdana, Tahoma;
+  text-align: center;
+  position: absolute;
+  top: 6px;
+  left: 1px;
+}
+.dashbox2 {
+  position: relative;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.dashbox2 A {
+  border: none;
+  text-decoration: none;
+}
+.dashbox2 A:hover {
+  border: none;
+}
+.dashbox2 img {
+  border: none;
+}
+.dashimage2 {
+}
+.dashtext2 {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 7px;
+  vertical-align: top;
+  text-decoration: underline;
+}
+.dashdesc2 {
+  display: block;
+  font-size: 13px;
+  padding: 5 0 0 15;
+  color: gray;
+}
+
+/*################ version 3 ################*/
+.dashbadge3 {
+  height: 25px;
+  width: 36px;
+  padding: 3px 3px 2px 2px;
+  position: absolute;
+  top: 20px;
+  left: 105px;
+}
+.dashbadge3 .count {
+  height: 25px;
+  width: 36px;
+  color: white;
+  font: bold 13px Helvetica, Verdana, Tahoma;
+  text-align: center;
+  position: absolute;
+  top: 6px;
+  left: 1px;
+}
+.dashbox3 {
+  position: relative;
+  display: inline-block;
+  *display: inline; /* IE */
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  width: 200px;
+}
+.dashbox3 A {
+  border-bottom: none;
+}
+.dashbox3 A:hover {
+  border-bottom: none;
+}
+.dashbox3 img {
+  border: none;
+}
+.dashimage3 {
+  display: block;
+}
+.dashtext3 {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+}
