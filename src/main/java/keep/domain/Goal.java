@@ -180,16 +180,26 @@ public class Goal {
 
     public void setSPI(int SPI) { this.SPI = SPI;}
 
+    /**
+     * Returns remaining days for a goal from current day.
+     * @param endDate
+     * @return remaining days
+     */
     public int getRemainingTime(Date endDate) {
         LocalDate today = LocalDate.now();
         Calendar calendar = new GregorianCalendar();
         calendar.setTime(endDate);
         LocalDate end = LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH));
-        //Period period = Period.between(today, end);
         this.remainingTime=(int) ChronoUnit.DAYS.between(today,end);
         return remainingTime;
     }
 
+    /**
+     * Returns total days remaining from a start and end date.
+     * @param startDate
+     * @param endDate
+     * @return Total days remaining
+     */
     public int getRemainingTime(Date startDate,Date endDate){
         Calendar start=new GregorianCalendar();
         start.setTime(startDate);
@@ -203,6 +213,13 @@ public class Goal {
 
     }
 
+    /**
+     * Returns the performance index.
+     * SPI=0 if lagging
+     * SPI=1 if ahead of schedule
+     * SPI=2 if on time
+     * @return performance index
+     */
     public int getSPI(){
         int increasing=0;
         int totalDays=getRemainingTime(startDate,endDate);
@@ -255,6 +272,10 @@ public class Goal {
         return SPI;
     }
 
+    /**
+     * Calculates the % complete.
+     * @return Percent complete
+     */
     public Double getPercentComplete(){
         Double percent=0.0;
         int increasing=0;
@@ -269,12 +290,5 @@ public class Goal {
             percent=((startValue-currentValue)/(startValue-endValue))*100;
         }
         return percent;
-    }
-
-    public Double laggingOrAheadBy(){
-        Double days=0.0;
-
-
-        return days;
     }
 }

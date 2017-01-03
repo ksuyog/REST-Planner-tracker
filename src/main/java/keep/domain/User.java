@@ -10,6 +10,7 @@ import main.java.keep.connections.MongoConnection;
 import sun.security.util.Password;
 
 /**
+ * User class.
  * Created by suyog on 12/17/2016.
  */
 public class User {
@@ -99,6 +100,12 @@ public class User {
         connection.getUserDBCollection().update(searchQuery,newDocument);
     }
 
+    /**
+     * Authenticates and authorizes the user credentials.
+     * @param connection
+     * @param token
+     * @return is authorised
+     */
     public boolean isAuthorized(MongoConnection connection,String token){
         Boolean authorized=false;
         String[] array=token.split(" ");

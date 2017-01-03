@@ -11,14 +11,14 @@ import java.util.Calendar;
 import static com.mongodb.client.model.Aggregates.limit;
 
 /**
+ * Creates a single day or multiple day task and stores to the database.
  * Created by suyog on 12/17/2016.
  */
 public class CreateGoal {
-
     public CreateGoal(Goal goal, MongoConnection connection,int userId) {
         goal.setId(getLatestId(connection)+1);
         goal.setUserId(userId);
-        // To-Do task
+        // single day task
         if(goal.getTimeSpan()==1){
             goal.setStatus(1);
         }
@@ -29,12 +29,16 @@ public class CreateGoal {
             goal.setStatus(1);
         }
 
-        //goal.setUserId(connection.getCurrentUser().getId());
         Gson gson=new Gson();
         BasicDBObject object= (BasicDBObject)JSON.parse(gson.toJson(goal));
         connection.GoalDBCollection.insert(object);
     }
 
+    /**
+     * Returns the ID of the recent document entry in the collection. Returns 0 for empty collection.
+     * @param connection
+     * @return Latest Id in the DB
+     */
     public int getLatestId(MongoConnection connection){
         DBCursor cursor=connection.GoalDBCollection.find().sort(new BasicDBObject("_id",-1));
         if(cursor.hasNext()) {

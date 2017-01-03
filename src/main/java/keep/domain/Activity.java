@@ -3,6 +3,7 @@ package main.java.keep.domain;
 import java.util.Date;
 
 /**
+ * You can define activities under the goals.
  * Created by suyog on 12/17/2016.
  */
 public class Activity {

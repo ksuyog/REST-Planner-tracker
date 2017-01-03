@@ -12,10 +12,19 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
+ * Reads the Goals from the collection.
  * Created by suyog on 12/17/2016.
  */
 public class ReadGoal {
 
+    /**
+     * Reads the goal using goal name and userId.
+     * @param name
+     * @param connection
+     * @param userId
+     * @return Goal
+     * @throws ParseException
+     */
     public Goal readGoalByName(String name, MongoConnection connection,int userId) throws ParseException {
 
         BasicDBObject whereName=new BasicDBObject();
@@ -28,13 +37,16 @@ public class ReadGoal {
             goal.setRemainingTime(goal.getRemainingTime(goal.getEndDate()));
             goal.setSPI(goal.getSPI());
         }
-
-        //Goal goal = (new Gson()).fromJson(object.toString(), Goal.class);
-        //goal.setRemainingTime(goal.getRemainingTime(goal.getEndDate()));
-        //goal.setSPI(goal.getSPI());
         return goal;
     }
 
+    /**
+     * Reads the goal using goal Id and userId.
+     * @param id
+     * @param connection
+     * @param userId
+     * @return Goal
+     */
     public Goal readGoalById(int id, MongoConnection connection,int userId) {
 
         BasicDBObject whereId=new BasicDBObject();
@@ -51,6 +63,13 @@ public class ReadGoal {
         return goal;
     }
 
+    /**
+     * Reads all goals for a userId.
+     * @param connection
+     * @param userId
+     * @return List of goals
+     * @throws ParseException
+     */
     public List<Goal> readAllGoals(MongoConnection connection,int userId) throws ParseException {
         List<Goal> list=new ArrayList<Goal>();
         BasicDBObject whereUserId=new BasicDBObject();
@@ -60,7 +79,6 @@ public class ReadGoal {
             DBObject object=cursor.next();
             Goal goal=convertToGoal(object);
 
-            /*Goal goal=(new Gson()).fromJson(object.toString(),Goal.class);*/
             if(goal.getTimeSpan()==3){
                 goal.setRemainingTime(goal.getRemainingTime(goal.getEndDate()));
                 goal.setSPI(goal.getSPI());
@@ -70,6 +88,12 @@ public class ReadGoal {
         return list;
     }
 
+    /**
+     * Converts DBObject returned by MongoDB to Goal object.
+     * @param object
+     * @return Goal
+     * @throws ParseException
+     */
     public Goal convertToGoal(DBObject object) throws ParseException {
         BasicDBObject basicDBObject= (BasicDBObject) object;
         Goal goal=new Goal();
@@ -94,6 +118,12 @@ public class ReadGoal {
         return goal;
     }
 
+    /**
+     * Converts date returned by MongoDB to Java.Util.Date format.
+     * @param mongoString
+     * @return Date
+     * @throws ParseException
+     */
     public Date convertToDate(String mongoString) throws ParseException {
         String[] array=mongoString.split(" ");
         // Dec 19, 2016 7:00:00 PM

@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
+ * Response object to be sent in the response.
  * Created by suyog on 12/29/2016.
  */
 public class ResponseGoal {
@@ -49,6 +50,10 @@ public class ResponseGoal {
         this.percentComplete = percentComplete;
     }
 
+    /**
+     * Converts Goal object to ResponseGoal object.
+     * @param goal
+     */
     public ResponseGoal(Goal goal){
         _id=goal.get_id();
         name=goal.getName();
@@ -178,6 +183,21 @@ public class ResponseGoal {
     public HashMap<String, String> getHistory() {
         return history;
     }
+    public int getRemainingTime() {
+        return remainingTime;
+    }
+
+    public void setRemainingTime(int remainingTime) {
+        this.remainingTime = remainingTime;
+    }
+
+    public int getSPI() {
+        return SPI;
+    }
+
+    public void setSPI(int SPI) {
+        this.SPI = SPI;
+    }
 
     public void setHistory(HashMap<String, Date> history) {
         HashMap<String,String> newMap=new HashMap<>();
@@ -198,20 +218,6 @@ public class ResponseGoal {
         return dateString=simpleDateFormat.format(date);
     }
 
-    public int getRemainingTime() {
-        return remainingTime;
-    }
 
-    public void setRemainingTime(int remainingTime) {
-        this.remainingTime = remainingTime;
-    }
-
-    public int getSPI() {
-        return SPI;
-    }
-
-    public void setSPI(int SPI) {
-        this.SPI = SPI;
-    }
 
 }

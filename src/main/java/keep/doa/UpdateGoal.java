@@ -15,6 +15,7 @@ import java.text.ParseException;
 import java.util.*;
 
 /**
+ * Updates a goal.
  * Created by suyog on 12/17/2016.
  */
 public class UpdateGoal {

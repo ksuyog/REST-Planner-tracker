@@ -8,6 +8,10 @@ import main.java.keep.domain.User;
 import org.bson.Document;
 
 /**
+ * Class for maintaining connection to the MongoDB database.
+ * Specify the Database URL
+ * Specify the database e.g. "keepdb"
+ * Specify the collection names for storing user and goals
  * Created by suyog on 12/18/2016.
  */
 public class MongoConnection {

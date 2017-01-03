@@ -4,6 +4,7 @@ import com.mongodb.BasicDBObject;
 import main.java.keep.connections.MongoConnection;
 
 /**
+ * Deletes the document from the collection using name and userId.
  * Created by suyog on 12/17/2016.
  */
 public class DeleteGoal {

@@ -15,11 +15,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * API's exposed by WebServvice
  * Created by suyog on 12/17/2016.
  */
 @Path("/keep")
 public class WebServices {
 
+    /**
+     * Creates a newuser with the credentials given in HeaderParams:"Authorization"
+     * @param authenticationToken
+     * @return Username with success response code.
+     */
     @GET
     @Path("/newuser")
     @Produces(MediaType.APPLICATION_JSON)
@@ -31,6 +37,11 @@ public class WebServices {
         return Response.status(200).entity(user.getName()).build();
     }
 
+    /**
+     * Logins the current user.
+     * @param authenticationToken
+     * @return response code.
+     */
     @GET
     @Path("/login")
     public Response login(@HeaderParam("Authorization") String authenticationToken ){
@@ -49,6 +60,12 @@ public class WebServices {
         return Response.status(200).entity("Logged out").build();
     }
 
+    /**
+     * Creates a goal in the DB using the JSON goal object passed by user.
+     * @param goal
+     * @param authenticationToken
+     * @return Created ResopnseGoal object with response code.
+     */
     @POST
     @Path("/create")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -74,6 +91,14 @@ public class WebServices {
         return Response.status(returnStatus).entity(returnObject).build();
     }
 
+    /**
+     * Returns the goal by given goal name.
+     * @param name
+     * @param authenticationToken
+     * @return If successful, returns Goal by given name
+     *         If error, Internal server Error with code 500.
+     *         If user is not logged In or not valid, Unauthorized access with code 403.
+     */
     @GET
     @Path("/read/{name}")
     @Produces("application/json")
@@ -96,7 +121,6 @@ public class WebServices {
             } catch (ParseException e) {
                 returnStatus=500;
                 returnObject=new String("Internal Server Error");
-                //e.printStackTrace();
             }
         }
         else{
@@ -106,10 +130,17 @@ public class WebServices {
         return Response.status(returnStatus).entity(returnObject).build();
     }
 
+    /**
+     * Returns all the goals for a user.
+     * @param authenticationToken
+     * @return If successful, returns Goals.
+     *         If error, Internal server Error with code 500.
+     *         If user is not logged In or not valid, Unauthorized access with code 403.
+     */
     @GET
     @Path("/read/")
     @Produces("application/json")
-    public Response readAllGoals(@HeaderParam("Authorization") String authenticationToken) throws ParseException {
+    public Response readAllGoals(@HeaderParam("Authorization") String authenticationToken) {
 
         MongoConnection connection=new MongoConnection();
         connection.connectToUserDB();
@@ -121,12 +152,18 @@ public class WebServices {
         int returnStatus=0;
         Object returnObject = null;
         if(user.isAuthorized(connection,authenticationToken)){
-            list=readGoal.readAllGoals(connection,user.getId());
-            for(Goal goal:list){
-                responseGoalList.add(new ResponseGoal(goal));
+            try {
+                list = readGoal.readAllGoals(connection, user.getId());
+                for (Goal goal : list) {
+                    responseGoalList.add(new ResponseGoal(goal));
+                }
+                returnStatus = 200;
+                returnObject = responseGoalList;
             }
-            returnStatus=200;
-            returnObject=responseGoalList;
+            catch (ParseException pe){
+                returnStatus=500;
+                returnObject=new String("Internal Server Error");
+            }
         }
         else{
             returnStatus=403;
@@ -135,11 +172,19 @@ public class WebServices {
         return Response.status(returnStatus).entity(returnObject).build();
     }
 
+    /**
+     * Updates the goal given by goal name.
+     * @param goal
+     * @param authenticationToken
+     * @return If successful, returns updated message.
+     *         If error, Internal server Error with code 500.
+     *         If user is not logged In or not valid, Unauthorized access with code 403.
+     */
     @PUT
     @Path("/update/{name}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response updateGoal(Goal goal,@HeaderParam("Authorization") String authenticationToken) throws JSONException, IllegalAccessException {
+    public Response updateGoal(Goal goal,@HeaderParam("Authorization") String authenticationToken) {
 
         MongoConnection connection=new MongoConnection();
         connection.connectToUserDB();
@@ -155,7 +200,12 @@ public class WebServices {
             } catch (ParseException e) {
                 returnStatus=500;
                 returnObject=new String("Internal Server Error");
-                //e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                returnStatus=500;
+                returnObject=new String("Internal Server Error");
+            } catch (JSONException e) {
+                returnStatus=500;
+                returnObject=new String("Internal Server Error");
             }
         }
         else{
@@ -165,6 +215,14 @@ public class WebServices {
         return Response.status(returnStatus).entity(returnObject).build();
     }
 
+    /**
+     * Deletes a goal by name.
+     * @param name
+     * @param authenticationToken
+     * @return If successful, returns deleted message.
+     *         If error, Internal server Error with code 500.
+     *         If user is not logged In or not valid, Unauthorized access with code 403.
+     */
     @DELETE
     @Path("/delete/{name}")
     @Consumes(MediaType.APPLICATION_JSON)
